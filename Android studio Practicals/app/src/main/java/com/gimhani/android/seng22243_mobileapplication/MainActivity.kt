@@ -35,6 +35,13 @@ class MainActivity : AppCompatActivity() {
                 .setAnchorView(R.id.fab)
                 .setAction("Action", null).show()
         }
+
+        binding.fab.setOnLongClickListener {
+            binding.infoTextView.text = "Long Press is done!!"
+            binding.infoTextView.setBackgroundResource(R.color.red)
+            binding.infoTextView.setTextColor(getResources().getColor(R.color.pink))
+            return@setOnLongClickListener true
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
