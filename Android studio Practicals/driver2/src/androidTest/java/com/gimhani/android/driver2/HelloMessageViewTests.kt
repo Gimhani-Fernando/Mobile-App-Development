@@ -22,7 +22,7 @@ class HelloMessageViewTests {
             }
         }
     }
-    
+
     @Test
     fun it_should_show_message_for_no_age(){
         composeTestRule.onNodeWithText("Add").performClick()
